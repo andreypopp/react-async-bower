@@ -2,7 +2,7 @@
   if (typeof define === 'function' && define.amd) {
     define(['react'], factory);
   } else {
-    root.ReactRouter = factory(root.React);
+    root.ReactAsync = factory(root.React);
   }
 })(this, function(React) {
 
@@ -17,3 +17,5 @@
       throw new Error(msg);
     }
   }
+
+  return
