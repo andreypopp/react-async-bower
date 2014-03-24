@@ -6,8 +6,7 @@ PATH := $(BIN):$(PATH)
 NAME = ReactAsync
 NODE_PATH := ./src/node_modules/:$(NODE_PATH)
 TARGETS = \
-	react-async.js \
-	react-async.min.js
+	react-async.js
 
 build: $(TARGETS)
 
