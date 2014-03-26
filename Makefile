@@ -10,6 +10,13 @@ TARGETS = \
 
 build: $(TARGETS)
 
+release:
+	(cd src && git fetch --all && git checkout $(VERSION))
+	git tag $(VERSION)
+	git commit -m "$(VERSION)"
+	git push origin master
+	git push --tags origin master
+
 react-async.prod.js:
 	$(call browserify,production)
 
@@ -25,7 +32,7 @@ clean:
 define browserify
 	@mkdir -p $(@D)
 	@cat ./shim.begin.js > $@
-	@NODE_PATH=$(NODE_PATH) NODE_ENV=$(1) browserify ./ \
+	@NODE_PATH=$(NODE_PATH) NODE_ENV=$(1) browserify -r ./:__main__ \
 		| sed -E 's/function\(require/function(__browserify__/g' \
 		| sed -E 's/require\(/__browserify__(/g' \
 		>> $@

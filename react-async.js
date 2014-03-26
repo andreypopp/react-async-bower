@@ -18,7 +18,8 @@
     }
   }
 
-  return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++) return s(r[o]);return s})({1:[function(__browserify__,module,exports){
+  var
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"Focm2+":[function(__browserify__,module,exports){
 "use strict";
 
 var BaseMixin               = __browserify__('./lib/BaseMixin');
@@ -51,7 +52,9 @@ module.exports = {
   Mixin: Mixin
 };
 
-},{"./lib/BaseMixin":2,"./lib/getComponentFingerprint":3,"./lib/isAsyncComponent":4,"./lib/prefetchAsyncState":5}],2:[function(__browserify__,module,exports){
+},{"./lib/BaseMixin":3,"./lib/getComponentFingerprint":4,"./lib/isAsyncComponent":5,"./lib/prefetchAsyncState":6}],"__main__":[function(__browserify__,module,exports){
+module.exports=__browserify__('Focm2+');
+},{}],3:[function(__browserify__,module,exports){
 "use strict";
 
 var invariant         = (window.__ReactShim.invariant);
@@ -103,7 +106,7 @@ var BaseMixin = {
 
 module.exports = BaseMixin;
 
-},{"./isAsyncComponent":4}],3:[function(__browserify__,module,exports){
+},{"./isAsyncComponent":5}],4:[function(__browserify__,module,exports){
 "use strict";
 
 /**
@@ -118,7 +121,7 @@ function getComponentFingerprint(component) {
 
 module.exports = getComponentFingerprint;
 
-},{}],4:[function(__browserify__,module,exports){
+},{}],5:[function(__browserify__,module,exports){
 "use strict";
 
 /**
@@ -132,7 +135,7 @@ function isAsyncComponent(component) {
 
 module.exports = isAsyncComponent;
 
-},{}],5:[function(__browserify__,module,exports){
+},{}],6:[function(__browserify__,module,exports){
 "use strict";
 
 var invariant         = (window.__ReactShim.invariant);
@@ -167,5 +170,7 @@ function prefetchAsyncState(component, cb) {
 
 module.exports = prefetchAsyncState;
 
-},{"./isAsyncComponent":4}]},{},[1])
+},{"./isAsyncComponent":5}]},{},[])
+
+  return require('__main__');
 });
